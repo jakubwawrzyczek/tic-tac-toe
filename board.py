@@ -23,3 +23,8 @@ class Board:
         a = (index-1)//3
         b = index - 3*a - 1
         self.board_values[a][b] = value
+
+    def is_empty(self, index):
+        a = (index - 1) // 3
+        b = index - 3 * a - 1
+        return self.board_values[a][b] == ' '
