@@ -1,9 +1,9 @@
 class Board:
     def __init__(self):
         self.board_values = [
-            ['.', '.', '.'],
-            ['.', '.', '.'],
-            ['.', '.', '.']
+            [' ', ' ', ' '],
+            [' ', ' ', ' '],
+            [' ', ' ', ' ']
         ]
 
     def print_board(self):
@@ -18,3 +18,8 @@ class Board:
                 else:
                     board_row += values[n]
             print(board_row)
+
+    def set_value(self, index, value):
+        a = (index-1)//3
+        b = index - 3*a - 1
+        self.board_values[a][b] = value
