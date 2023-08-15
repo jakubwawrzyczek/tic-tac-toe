@@ -20,12 +20,7 @@ class Board:
             print(board_row)
 
     def print_instructions(self):
-        print('\n\nEach round you need to choose the number between 1-9 corresponding to the field on the board.\n'
-              '1 | 2 | 3\n'
-              '---------\n'
-              '4 | 5 | 6\n'
-              '---------\n'
-              '7 | 8 | 9')
+        pass
 
     def set_value(self, index, value):
         a = (index-1)//3

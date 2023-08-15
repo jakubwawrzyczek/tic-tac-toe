@@ -8,7 +8,7 @@ class GameEngine:
         print(f'\n\n{text}\n\n')
         print('---------')
 
-    def choose_field_on_the_board(self, index, board):
+    def choose_place_on_the_board(self, index, board):
         try:
             int(index)
         except ValueError:
