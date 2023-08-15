@@ -7,10 +7,13 @@ board = Board()
 player_x = Player(input('Choose username for "X": '), 'x')
 player_o = Player(input('Choose username for "O": '), 'o')
 
+game_engine.current_player = player_x
+
 while game_engine.is_game_still_on(board):
-    game_engine.change_player(player_x, player_o)
     index = input('Index: ')
 
-    game_engine.choose_place_on_the_board(index, board)
+    if game_engine.is_index_ok(index, board):
+        game_engine.change_player(player_x, player_o)
+        game_engine.choose_place_on_the_board(index, board)
 
     board.print_board()
