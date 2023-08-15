@@ -38,3 +38,15 @@ class Board:
             if ' ' in row:
                 is_full = False
         return is_full
+
+    def check_for_win(self):
+        for i in range(0, 3):
+            row = self.board_values[i]
+            if row[0] == row[1] == row[2] and row[0] != ' ':
+                return True
+            elif self.board_values[0][i] == self.board_values[1][i] == self.board_values[2][i] and self.board_values[0][i] != ' ':
+                return True
+        if self.board_values[0][0] == self.board_values[1][1] == self.board_values[2][2] and self.board_values[0][0] != ' ':
+            return True
+        elif self.board_values[0][2] == self.board_values[1][1] == self.board_values[2][0] and self.board_values[0][2] != ' ':
+            return True
