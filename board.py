@@ -19,12 +19,22 @@ class Board:
                     board_row += values[n]
             print(board_row)
 
+    def print_instructions(self):
+        pass
+
     def set_value(self, index, value):
         a = (index-1)//3
         b = index - 3*a - 1
         self.board_values[a][b] = value
 
-    def is_empty(self, index):
+    def is_place_empty(self, index):
         a = (index - 1) // 3
         b = index - 3 * a - 1
         return self.board_values[a][b] == ' '
+
+    def is_full(self):
+        is_full = True
+        for row in self.board_values:
+            if ' ' in row:
+                is_full = False
+        return is_full
